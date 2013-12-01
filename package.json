@@ -1,0 +1,25 @@
+{
+  "name": "backbone.storageEngine",
+  "version": "0.0.0",
+  "description": "-",
+  "main": "null",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-docco": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcfog/backbone.storageEngine"
+  },
+  "author": "mcfog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcfog/backbone.storageEngine/issues"
+  }
+}

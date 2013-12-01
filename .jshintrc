@@ -1,0 +1,17 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "latedef": true,
+  "noarg": true,
+  "sub": true,
+  "undef": true,
+  "boss": true,
+  "eqnull": true,
+  "devel": true,
+  "globals": {
+    "Backbone": false,
+    "_": false,
+    "SE": true
+  }
+}
