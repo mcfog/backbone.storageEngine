@@ -26,18 +26,21 @@ look [wrapper](https://github.com/mcfog/backbone.storageEngine/tree/master/wrapp
 
 ### use localStorage / chrome.storage
 
+```coffee
     LocalModel = Backbone.Model.extend {
-        sync: Backbone.StorageEngine.Engine.LocalStorage.construct model.name
+        sync: Backbone.StorageEngine.Engine.LocalStorage.createSync model.name
     }
 
     ChromeCollection = Backbone.Collection.extend {
-        sync: Backbone.StorageEngine.Engine.ChromeStorage.construct model.collection.name
+        sync: Backbone.StorageEngine.Engine.ChromeStorage.createSync model.collection.name
     }
+```
 
 localStorage powered by [jeromegn/Backbone.localStorage](https://github.com/jeromegn/Backbone.localStorage), and chrome.storage powered by [scryptmouse/Backbone.ChromeStorage](https://github.com/scryptmouse/Backbone.ChromeStorage)
 
 ### implement your own engine
 
+```coffee
     MyEngine = Backbone.StorageEngine.Engine.Base.extend {
         constructor: (@name)-> @
         create: (model, options)->
@@ -50,18 +53,20 @@ localStorage powered by [jeromegn/Backbone.localStorage](https://github.com/jero
     }
 
     MyCollection = Backbone.Collection.extend {
-        sync: MyEngine.construct 'my'
+        sync: MyEngine.createSync 'my'
     }
+```
 
 ### decide which engine to use on the fly
 requires `Backbone.StorageEngine.Router.LateBind`
 
+```coffee
     BaseModel = Backbone.Model.extend {
-        sync: Backbone.StorageEngine.Router.LateBind.construct (method, model, options)->
+        sync: Backbone.StorageEngine.Router.LateBind.createSync (method, model, options)->
             if model.type is 'local'
                 Backbone.StorageEngine.Engine.LocalStorage.construct model.name
             else
                 MyEngine.construct model.name
     }
-
+```
 
