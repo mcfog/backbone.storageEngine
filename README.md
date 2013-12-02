@@ -18,11 +18,11 @@ roll you own build
 
     grunt clean dist:<pkg>:<wrapper> uglify
 
-pkg might be `core` / `default` / `full`, or `localstorage` / `chromestorage`.  
-look `Gruntfile.coffee` for details
+`<pkg>` might be `core` / `default` / `full`, or `localstorage` / `chromestorage`.  
+look [Gruntfile.coffee](https://github.com/mcfog/backbone.storageEngine/blob/master/Gruntfile.coffee) for details
 
-wrapper might be `plain` / `amd` / 'amd-lodash'  
-look `wrapper` directory for details or simply roll your own wrapper 
+`<wrapper>` might be `plain` / `amd` / `amd-lodash`  
+look [wrapper](https://github.com/mcfog/backbone.storageEngine/tree/master/wrapper) directory for details or simply roll your own wrapper 
 
 ### use localStorage / chrome.storage
 
