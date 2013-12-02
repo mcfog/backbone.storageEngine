@@ -77,8 +77,10 @@ module.exports = (grunt)->
     grunt.file.write "dist/#{pkgName}-#{wrapperName}/backbone-storageEngine.js", source
 
   task_clean = ->
-    grunt.file.delete 'dist'
-    grunt.file.delete 'tmp'
+    grunt.file.mkdir './dist'
+    grunt.file.delete './dist'
+    grunt.file.mkdir './tmp'
+    grunt.file.delete './tmp'
 
   grunt.util.linefeed = '\n'
   grunt.registerTask 'source', task_source
