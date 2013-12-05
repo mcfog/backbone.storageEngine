@@ -57,7 +57,7 @@
   //--------------
   //decide which engine to use on the fly(but only once per model)  
   //
-  //     sync: Backbone.StorageEngin.Router.LateBind.construct (method, model, options)->
+  //     sync: Backbone.StorageEngin.Router.LateBind.createSync (method, model, options)->
   //       logic_returning_engine_instance model, options
 
   SE.Router.LateBind = SE.Router.Base.extend({
